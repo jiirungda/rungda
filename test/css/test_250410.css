@@ -12,6 +12,8 @@ body{
 *{
     margin: 0; /* 브라우저가 기본으로 주는 여백 삭제 */
     padding: 0;
+    box-sizing: border-box;
+    /* width/height와 padding을 같이주면 사이즈가 늘어남 - 이 현상을 막는 속성 */
 }
 h1,h2,h3,h4,h5,h6{
     font-size: inherit;
@@ -46,7 +48,8 @@ a{
     padding: 225px 0 0 0;
 }
 .esg .sub_tit,
-.int .sub_tit{
+.int .sub_tit,
+.mission .sub_tit{
     font-size: 50px;
     font-weight: 700;
     line-height: 1.35;
@@ -60,7 +63,7 @@ a{
     display: inline-block;
 }
 .int{
-    margin: 127px 0 100px 0;
+    margin: 127px 0 0 0;
 }
 .int h1{
     color: #207b8d;
@@ -80,4 +83,26 @@ a{
 .int ul li strong{
     font-weight: 700;
     color: #1d1d1d;
+}
+.mission{
+    margin: 70px 0 100px 0;
+}
+.mission .inner{
+    background-image: url(../images/misson.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 485px;
+    color: #fff;
+    padding: 120px 0 0 52px;
+}
+.mission .cnt{
+    color: rgba(255,255,255,0.8); /* opacity 80% */
+}
+section{
+    border-color: #207b8d;
+    background-color: #207b8d;
+}
+h2{
+    border: dererer;
 }
