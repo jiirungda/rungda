@@ -132,11 +132,24 @@ header .gnb ul li a{
     letter-spacing: -0.02em;
     margin: 0 0 20px 0;
 }
-.brand .cont{
-    border: 1px solid #666;
-    padding: 8px 0 0 0;
+.brand .cont {
+    border-top: 1px solid rgba(255,255,255,0.2);
+    color: rgba(255,255,255,0.6); /* 흰색(#FFF) RGB값 255 - opacity 60% */
+    padding: 17px 0 0 0;
 }
 
-footer{
-    margin: 400px 0 0 0;
+footer {
+    padding: 57px 0 68px 0;
+    background-color: #202020;
+    color: rgba(255,255,255,0.6);
+}
+footer .f_nav ul {
+    display: flex;
+    gap: 40px;
+    color: #fff;
+}
+footer .f_info {
+    margin: 30px 0 7px 0;
+    display: flex;
+    gap: 28px;
 }
