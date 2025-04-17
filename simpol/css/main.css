@@ -107,7 +107,7 @@ header .inner .shop{
     font-size: 45px;
     font-weight: 800;
     letter-spacing: -0.03em;
-    margin: 4px 0 12px 0;
+    margin: 2px 0 14px 0;
     color: #fff;
 }
 .network a{
@@ -115,7 +115,7 @@ header .inner .shop{
     border: 1px solid #fff;
     padding: 7px 20px; /*위아래 여백*/
     border-radius: 20px;
-    margin: 28px 0 0 0;
+    margin: 26px 0 0 0;
 }
 
 footer{
