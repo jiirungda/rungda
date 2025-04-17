@@ -1,0 +1,123 @@
+@import url(default.css);
+@import url(font.css);
+@import url(common.css);
+
+header{
+    display: flex;
+    justify-content: space-between;
+    /*logo와 inner를 header 넓이 안에서 좌우 끝으로 배치*/
+    height: 100px;
+    margin: 0 30px; /*위아래좌우*/
+}
+header .logo{
+    margin: 28px 0 0 0;
+}
+header .inner{
+    display: flex; /*gnb shop을 좌우로*/
+    align-items: center; /*위아래 가운데*/
+    gap: 35px; /*gnbdhk shop 사이의 여백*/
+}
+header .inner .gnb ul{
+    display: flex;
+}
+header .inner .gnb ul li a{
+    display: block; /*a의 필수값*/
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 100px;
+    /*header의 높이랑 1차메뉴의 a의 높이는 같아야함.. a에 행간을 header의 높이값으로 줌
+      a에 높이가 생기고 글자는 위아래 가운데 정렬*/
+    padding: 0 32px;
+}
+header .inner .shop{
+    font-size: 20px;
+    font-weight: 800;
+    color: #fff;
+    background-color: #15876E; /*태두리 안에 색깔 넣는법*/
+    padding: 6px 40px;
+    border-radius: 23px;
+}
+
+.visual{
+    background: url(../images/visual_bg2.jpg) no-repeat center center / cover;
+    height: 600px;
+    margin: 0 25px;
+    border-radius: 12px;
+    color: #fff;
+    text-align: center;
+}
+.visual h2{
+    font-size: 45px;
+    font-weight: 800;
+    letter-spacing: -0.03em; /*-30*/
+    padding: 200px 0 5px 0;
+}
+
+.product{
+    margin: 130px 0 0 0;
+}
+.product .tit h2{
+    font-size: 45px;
+    font-weight: 800;
+    letter-spacing: -0.03em; /*-30*/
+    color: #1d1d1d;
+}
+.product .tit p{
+    color: #15876E;
+}
+.product .list ul{
+    display: flex;
+    justify-content: space-between;
+    margin: 19px 0 0 0;
+}
+.product .list ul li{
+    width: 404px;
+}
+.product .list ul li a{
+    display: block;
+}
+.product .list ul li a .photo{
+    font-size: 0;
+    line-height: 0;
+    /*이미지하단에 여백을 삭제하기 위해서
+    img태그에 직접주면 적용X
+    img태그만 감싸는 요소에 줘야함*/
+}
+.product .list ul li a h3{
+    font-size: 20px;
+    color: #1d1d1d;
+    margin: 14px 0 0 0;
+    /*1줄로 제한*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.network{
+    background: url(../images/network_bg.jpg) no-repeat center center / cover;
+    margin: 170px 0 0 0;
+    height: 700px;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+.network h2{
+    padding: 265px 0 0 0;
+    color: #15876E;
+}
+.network .sub_tit {
+    font-size: 45px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin: 4px 0 12px 0;
+    color: #fff;
+}
+.network a{
+    display: inline-block;
+    border: 1px solid #fff;
+    padding: 7px 20px; /*위아래 여백*/
+    border-radius: 20px;
+    margin: 28px 0 0 0;
+}
+
+footer{
+    margin: 400px 0 0 0;
+}
