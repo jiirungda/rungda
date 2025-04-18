@@ -70,7 +70,7 @@ header .gnb ul li a{
 }
 .product .list ul li a h3{
     position: absolute; /*a를 기준으로 정렬*/
-    left: 33px;
+    left: 35px;
     bottom: 20px;
     color: #fff;
     font-size: 25px;
