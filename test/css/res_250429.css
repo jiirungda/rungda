@@ -3,7 +3,7 @@
 @import url(font.css);
 
 .news{
-    margin: 180px 0 0 0;
+    margin: 156px 0 0 0;
 }
 .news .wrapper{
     display: flex;
@@ -145,6 +145,78 @@
                 }
                 .news .more:hover::after{
                     transform: rotate(320deg);
+                }
+}/*@media*/
+
+.global{
+    margin: 162px 0 0 0;
+}
+.global .wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.global .txt{
+    width: calc(50% - 12px);
+    padding: 39px 0;
+    /*왼쪽글자의 높이에서 padding만큼 오른쪽 이미지가 늘어남*/
+}
+.global .txt h2{
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1d1d1d;
+    margin: 0 0 15px 0;
+    position: relative; /*after 정렬의 기준*/
+}
+.global .txt h2::after{
+    content: "";
+    position: absolute; /*h2를 기준으로 정렬*/
+    left: 0;
+    bottom: -7px;
+    width: 98px;
+    height: 1px;
+    background-color: #ccc;
+}
+.global .photo{
+    width: calc(50% - 12px);
+    overflow: hidden;
+    border-radius: 10px;
+}
+.global .photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media screen and (max-width:640px){
+                .global{
+                    margin: 40px 0 0 0;
+                }
+                .global .txt{
+                    width: calc(50% - 8px);
+                    padding: 21px 0;
+                    /*왼쪽글자의 높이에서 padding만큼 오른쪽 이미지가 늘어남*/
+                }
+                .global .txt h2{
+                    font-size: 25px;
+                }
+                .global .txt h2::after{
+                    bottom: -7px;
+                    width: 98px
+                }
+                .global .txt h2 br{
+                    display: none; /*br태그로 인한 줄바꿈 삭제*/
+                }
+                .global .txt p br{
+                    display: none;
+                }
+                .global .photo{
+                    width: calc(50% - 8px)
+                    border-radius: 10px;
+                }
+                .global .photo img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
                 }
 }/*@media*/
 
