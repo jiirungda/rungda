@@ -210,7 +210,7 @@
                     display: none;
                 }
                 .global .photo{
-                    width: calc(50% - 8px)
+                    width: calc(50% - 12px);
                     border-radius: 10px;
                 }
                 .global .photo img{
