@@ -123,8 +123,17 @@ header .tnb .lang{
     margin: 149px 0 0 0;
 }
 .project .wrapper{
-    display: flex; /*tit/list좌우배치*/
+    display: flex; /*tit/list 좌우배치*/
     justify-content: space-between;
+    align-items: flex-start; /*tit의 높이를 존재하는 만큼만 주기 위해서*/
+}
+.project .tit{
+    position: sticky; /*감싸는 wrapper를 기준으로 정렬 무조건*/
+    top: 20px;
+    /*좌우 정렬값 주면 안됨.. top값은 상단에 고정되었을때 위치값
+       sticky의 단점
+       감싸는 요소 중에 단한개라도 overflow:hidden;값을 가지고 있으면
+       적용안됨. 사실상 못쓴다고 생각하면 됩니다.*/
 }
 .project .tit h2{
     color: #1976D3;
@@ -132,6 +141,7 @@ header .tnb .lang{
 }
 .project .list{
     width: 52.69%;/*664/1260*100=*/
+    margin: 110px 0 0 0;
 }
 .project .list ul{
     display: flex;
@@ -143,6 +153,9 @@ header .tnb .lang{
     /* 100%/한줄에 보일 li갯수 =100%/2=50%
         한줄에 있는 여백의 총합 / 한줄에 보일 li갯수 = 24px/2 =12px*/
 }
+.project .list ul li:nth-child(even) { /* even - 짝수 , odd - 홀수*/
+    transform: translateY(-111px);
+}
 .project .list ul li a{
     display: block;
     position: relative;/*txt 정렬의기준*/
@@ -151,8 +164,21 @@ header .tnb .lang{
     overflow: hidden;
     border-radius: 10px;
     height: 417px;
+    position: relative; /*before 정렬의 기준*/
+}
+.project .list ul li a .photo::before{
+    content: "";
+    position: absolute; /*photo를 기준으로 정렬*/
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1976D3;
+    opacity: 0;
+    transition: 0.5s;
 }
 .project .list ul li a .photo img{
+    /*이미지를 감싸는 영역 photo 사이즈만큼만 나오게 리사이즈*/
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -160,6 +186,59 @@ header .tnb .lang{
 .project .list ul li a .txt{
     position: absolute; /* a를 기준으로 정렬*/
     left: 0;
-    bottom: 0;
+    bottom: 30px;
+    width: 100%;
     color: #fff;
+    padding: 0 24px;
 }
+.project .list ul li a .txt h3 {
+    font-family: 'Gmarket Sans';
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 1.2;
+}
+.project .list ul li a .txt p{
+    display: none;
+    margin: 12px 0;
+    color: rgba(255,255,255,0.8); 
+}
+.project .list ul li a .txt span{
+    display: none; 
+    /*숨김 - display : none은 아예 태그가 존재하지 않는 것처럼 코딩됨*/
+    color: rgba(255,255,255,0.8);
+    font-size: 15px;
+    padding: 0 27px 0 0;
+    position: relative; /*after정렬의 기준*/
+}
+.project .list ul li a .txt span::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 22px;
+    height: 22px;
+    background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_23_1493' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='22' height='22'%3E%3Crect width='22' height='22' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_23_1493)'%3E%3Cpath d='M12.6924 16.1816L11.7262 15.1875L15.2272 11.6865H4.125V10.3115H15.2272L11.7262 6.81053L12.6924 5.81641L17.875 10.999L12.6924 16.1816Z' fill='white' fill-opacity='0.8'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+/*****************오버했을때********************/
+
+.project .list ul li a:hover .photo::before{
+    opacity: 0.9;
+}
+.project .list ul li a:hover .txt p{
+    display: block;/*none으로 숨긴건 흔히 block으로 보이게함*/
+}
+.project .list ul li a:hover .txt span{
+    display: inline-block; 
+}
+
+@media screen and (max-width:640px){
+
+}/*@media*/
+
+footer{
+    margin: 1000px 0 0 0;
+}
+
+    
