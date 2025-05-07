@@ -75,7 +75,7 @@ header .tnb .lang{
                     /*오른쪽 여백만 삭제 - 메뉴열기 버튼이 오른쪽까지 배치되게 하려고*/
                 }
                 header .logo a img{
-                    width: 90px;
+                    width: 93px;
                 }
                 header .gnb .gnb_open{
                     display: block; /*none으로 숨김요소를 다른속성만 주면 나타남*/
@@ -84,7 +84,7 @@ header .tnb .lang{
                     background-image: url("data:image/svg+xml,%3Csvg width='19' height='19' viewBox='0 0 19 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_35_415' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='19' height='19'%3E%3Crect width='19' height='19' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_35_415)'%3E%3Cpath d='M2.77087 5.54297V4.35547H16.2292V5.54297H2.77087ZM2.77087 14.6471V13.4596H16.2292V14.6471H2.77087ZM2.77087 10.0951V8.90755H16.2292V10.0951H2.77087Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
                     background-position: center center;
                     background-repeat: no-repeat;
-                    background-size: 19px;
+                    background-size: 22px;
                 }
                 header .gnb .gnb_wrap{
                     display: none;/*숨김*/
