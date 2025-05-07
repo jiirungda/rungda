@@ -118,3 +118,48 @@ header .tnb .lang{
                     display: none; /*줄바꿈 삭제*/
                 }
 }/*@media*/
+
+.project{
+    margin: 149px 0 0 0;
+}
+.project .wrapper{
+    display: flex; /*tit/list좌우배치*/
+    justify-content: space-between;
+}
+.project .tit h2{
+    color: #1976D3;
+    margin: 0 0 10px 0;
+}
+.project .list{
+    width: 52.69%;/*664/1260*100=*/
+}
+.project .list ul{
+    display: flex;
+    flex-wrap: wrap; /*2줄이상 허용*/
+    gap: 24px 
+}
+.project .list ul li{
+    width: calc(50% - 12px);
+    /* 100%/한줄에 보일 li갯수 =100%/2=50%
+        한줄에 있는 여백의 총합 / 한줄에 보일 li갯수 = 24px/2 =12px*/
+}
+.project .list ul li a{
+    display: block;
+    position: relative;/*txt 정렬의기준*/
+}
+.project .list ul li a .photo{
+    overflow: hidden;
+    border-radius: 10px;
+    height: 417px;
+}
+.project .list ul li a .photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.project .list ul li a .txt{
+    position: absolute; /* a를 기준으로 정렬*/
+    left: 0;
+    bottom: 0;
+    color: #fff;
+}
