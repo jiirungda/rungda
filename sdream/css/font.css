@@ -1,0 +1,8 @@
+/*웹폰트를 선언*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@font-face {
+	font-family: 'Gmarket Sans';    font-style: normal;    font-weight: 700;
+	src: local('Gmarket Sans Bold'), local('GmarketSans-Bold'),
+	url('../font/GmarketSansBold.woff2') format('woff2'),
+	url('../font/GmarketSansBold.woff') format('woff');
+}
