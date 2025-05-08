@@ -3,32 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
-    <title>지이의 코딩연습</title>
+    <link rel="stylesheet" href="css/main.css?v=2505081117">
+    <title>삼성꿈장학재단</title>
 </head>
 <body>
- <h1>지이의 코딩자료</h1>
- <!--경로는 / ./ ../ 모두 다른 의미임
-/test/test.html 이건 root 부터의 경로 (절대경로)
-./test/test.html 이건 test/test.html과 동일 (./현재파일에서부터)
-../test/test.html은 지금 폴더 밖에 나가서 test폴더 안에 test.-->
-
- <ul>
-    <li><a href="test/test.html">25.04.07 - html코드 채용 생성</a></li>
-    <li><a href="test/test_250408.html">25.04.08 - css 처음 연습</a></li>
-    <li><a href="test/test_250408_hd.html">25.04.08 - HD현대 CSS 연습</a></li>
-    <li><a href="test/test_250409.html">25.04.09 - 대전투자금융</a></li>
-    <li><a href="test/test_250409_dj.html">25.04.09 - 대전투자금융2(배경이 넓게 - wapper밖)</a></li>
-    <li><a href="test/test_250410.html">25.04.10 - HD현대 (노트산스 서체, ul태그사용, 태그스타일 초기화)</a></li>
-    <li><a href="test/test_250411.html">25.04.11 -flex 코딩</a></li>
-    <li><a href="chinhung/index.html">25.04.14 - 진흥기업(디자인하고 퍼블리싱 pc형)</a></li>
-    <li><a href="simpol/index.html">25.04.16 - 심폴(디자인하고 퍼블리싱 pc형)</a></li>
-    <li><a href="test/absolute_250418.html">25.04.08 - absolute 테스트</a></li>
-    <li><a href="test/icon_250421.html">25.04.21 - icon 코딩 테스트</a></li>
-    <li><a href="chungsando/index.html">20.04.24 - 청산도</a></li>
-    <li><a href="test/res_250429.html">25.04.29 - 반응형</a></li>
-    <li><a href="djbus/index.html">25.04.30 - 대전복합터미널 평가</a></li>
-    <li><a href="sdream/index.html">25.05.07 - 삼성꿈장학재단</a></li>
- </ul>
+    <div id="wrap">
+        <header>
+            <div class="wrapper">
+                <h1 class="logo"><a href="index.html"><img src="images/logo.svg" alt="삼성꿈장학재단 Samsung Dream Scholarship Foundation"></a></h1>
+                <nav class="gnb">
+                    <button class="gnb_open"><span class="blind">메뉴열기</span></button> <!--모바일에서 누르면 메뉴가 나옴-->
+                    <div class="gnb_wrap">
+                        <ul>
+                            <li><a href="#">사업소개</a></li>
+                            <li><a href="#">장학신청</a></li>
+                            <li><a href="#">정보마당</a></li>
+                            <li><a href="#">재단소개</a></li>
+                        </ul>
+                    </div>
+                    <button class="gnb_close">메뉴닫기</button> <!--모바일에서 누르면 메뉴가 닫힘-->
+                    <!-- 메뉴열기를 누르면 메뉴가 나타나고 
+                         메뉴가 마음에 들면 메뉴를 눌러서 페이지 이동 
+                         만약 누를 메뉴가 없으면 닫기를 누르고 메뉴 닫음 -->
+                </nav>
+                <div class="tnb">
+                    <a href="#" class="mypage"><span class="blind">마이페이지</span></a><!-- 클릭하면 이동 -->
+                    <button class="lang"><span class="blind">언어선택</span></button>
+                    <!-- 클릭하면 하단에 언어를 선택하는게 뜸(구현X) -->
+                </div>
+            </div>
+        </header>
+        <main class="container">
+            <section class="visual">
+                <div class="wrapper">
+                    <h2 class="section_tit">사람이 있을 곳을 지원하고<br>
+                        사람을 통해 사람을 키웁니다</h2>
+                    <p>삼성꿈장학재단은 더불어 성장하는 배움공동체를 지향합니다.</p>
+                </div>
+            </section><!--visual-->
+            <section class="project">
+                <div class="wrapper">
+                    <div class="tit">
+                        <h2>장학사업</h2>
+                        <p class="section_tit">별을 위한<br> 희망 지원사업</p>
+                    </div>
+                    <div class="list">
+                        <ul>
+                            <li>
+                                <a href="#n" class="on">
+                                    <div class="photo"><img src="images/project01.jpg" alt=""></div>
+                                    <div class="txt">
+                                        <h3>멘토링<br> 꿈장학사업</h3>
+                                        <p>청소년들을 멘토와 함께 선발하여 멘토 선생님의 교육적, 정서적 지지를 받으면서 성장할 수 있도록 지원하는 사업</p>
+                                        <span>자세히보기</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/project02.jpg" alt=""></div>
+                                    <div class="txt">
+                                        <h3>리더육성<br> 장학사업</h3>
+                                        <p>사회의 각 분야에서 리더로 성장할 수 있도록 장학금과 교육 프로그램을 맞춤형으로 지원하는 사업</p>
+                                        <span>자세히보기</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/project03.jpg" alt=""></div>
+                                    <div class="txt">
+                                        <h3>배움터<br> 교육지원사업</h3>
+                                        <p>지역의 다양한 배움터들이 협력하여 양질의 교육프로그램을 운영하고 교육복지 안전망을 구축할 수 있도록 지원</p>
+                                        <span>자세히보기</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/project04.jpg" alt=""></div>
+                                    <div class="txt">
+                                        <h3>글로벌<br> 장학사업</h3>
+                                        <p>개발도상국 출신 대학(원)생을 지원하여 자국의 발전을 이끌 수 있는 글로벌 리더로 양성하는 사업</p>
+                                        <span>자세히보기</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/project05.jpg" alt=""></div>
+                                    <div class="txt">
+                                        <h3>방과후<br> 학교 대상</h3>
+                                        <p>매년 1월 교육부가 주최하여 우수한 방과후학교 프로그램을 운영하는 학교, 교사, 비영리단체를 시상</p>
+                                        <span>자세히보기</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/project06.jpg" alt=""></div>
+                                    <div class="txt">
+                                        <h3>청소년<br> 치아교정지원사업</h3>
+                                        <p>재단 꿈장학생 중 치아교정이 필요한 청소년에게 무료 치아교정의 기회를 제공하는 사업</p>
+                                        <span>자세히보기</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="news">
+                <div class="wrapper">
+                    <div class="tit">
+                        <h2>재단소식</h2>
+                        <p class="section_tit">별 이야기를 담다</p>
+                    </div><!--//tit-->
+                    <div class="list">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <div class="subject">
+                                        <strong>일반공지</strong>
+                                        <h3> 연구과제 수행기관 입찰 공고 (삼성꿈장학재단 2주기 장학생 성장과 변화 분석 연구(Ⅶ))</h3>
+                                    </div>
+                                    <span class="date">2025-04-21</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="subject">
+                                        <strong>장학공지</strong>
+                                        <h3>2025년 배움터 교육지원사업 공모</h3>
+                                    </div>
+                                    <span class="date">2025-03-22</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="subject">
+                                        <strong>장학공지</strong>
+                                        <h3>2025년 글로벌 국외장학사업 공모</h3>
+                                    </div>
+                                    <span class="date">2025-02-17</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="subject">
+                                        <strong>일반공지</strong>
+                                        <h3>장학생 집중 모니터링 및 생애단계별 성장사례 분석 연구 단행본 출판 제작 업체 선정 (재공고)</h3>
+                                    </div>
+                                    <span class="date">2025-01-05</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="subject">
+                                        <strong>일반공지</strong>
+                                        <h3>기부금품 모집 및 사용명세 보고 기부금품 모집 및 사용명세 보고 기부금품 모집 및 사용명세 보고 기부금품 모집 및 사용명세 보고 기부금품 모집 및 사용명세 보고</h3>
+                                    </div>
+                                    <span class="date">2024-12-26</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div><!--//list-->
+                    <a href="#" class="more">더보기</a>
+                </div>
+            </section><!--//news-->
+        </main>
+        <footer></footer>
+    </div>
 </body>
 </html>
