@@ -293,8 +293,8 @@ header .tnb .lang{
 .webzine{
     background-color: #1976D3;
     color: #fff;
-    margin: 160px 0 0 0;
-    padding: 165px 0 183px 0;
+    margin: 165px 0 0 0;
+    padding: 128px 0 183px 0;
 }
 .webzine .tit h2{
     margin: 0 0 10px 0;
@@ -325,7 +325,7 @@ header .tnb .lang{
 }
 .webzine .list ul li a .photo{
     overflow: hidden;
-    height: 312px;
+    height: 211px;
 }
 .webzine .list ul li a .photo img{
     width: 100%;
