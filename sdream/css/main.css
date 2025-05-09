@@ -248,14 +248,14 @@ header .tnb .lang{
         top: auto; /* top값을 지정하지 않은 것 처럼 취소하는 값.. 0이랑 다름 */
     }
     .project .tit h2 {
-        margin: 0 0 6px 0;
+        margin: 0 0 5px 0;
     }
     .project .tit p br {
         display: none; /* 줄바꿈 삭제 */
     }
     .project .list {
         width: auto; /* block요소 이기때문에 100% 들어감 */
-        margin: 22px 0 0 0;
+        margin: 20px 0 0 0;
     }
     .project .list ul {
         gap: 9px 16px; /* 위아래 - 좌우 */
@@ -270,7 +270,7 @@ header .tnb .lang{
     }
     .project .list ul li a .photo {
         border-radius: 5px;
-        height: 81px;
+        height: 93px;
     }
     .project .list ul li a .txt {
         /* absolute -> 해제 */
@@ -293,8 +293,9 @@ header .tnb .lang{
 .webzine{
     background-color: #1976D3;
     color: #fff;
-    margin: 165px 0 0 0;
-    padding: 128px 0 183px 0;
+    margin: 150px 0 0 0;
+    padding: 128px 0 150px 0;
+    position: relative; /*more정렬의 기준*/
 }
 .webzine .tit h2{
     margin: 0 0 10px 0;
@@ -303,15 +304,20 @@ header .tnb .lang{
     color: #fff;
 }
 .webzine .list{
-    height: 200px;
     width: calc(50% + 630px);
     position: relative;
     left: calc(50% - 630px);
-    margin: 40px 0 0 0;
+    padding: 40px 0 5px 0;
+    overflow: hidden; /*가로 스크롤바 삭제*/
 }
 .webzine .list ul{
     display: flex;
     gap: 24px;
+    width: 1605px;
+    /*
+        li넓이 *li갯수 + li 여백 * li갯수
+        297 *5 + 24*5 =1485 + 120 = 1605
+    */
 }
 .webzine .list ul li{
     width: 297px;
@@ -322,36 +328,88 @@ header .tnb .lang{
     border-radius: 10px;
     color: #1d1d1d;
     overflow: hidden;
+    transition: 0.5s;
 }
 .webzine .list ul li a .photo{
     overflow: hidden;
-    height: 211px;
+    height: 210px;
 }
 .webzine .list ul li a .photo img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 0.5s; /*오버이후 부드럽게 효과*/
+}
+.webzine .list ul li a .txt{
+    padding: 25px 24px 24px 24px;
+}
+.webzine .list ul li a .txt strong{
+    color: #1976D3;
+    display: block;
+    /*한줄제한 - 넓이가 제한이 되어야함 (block요소여야함)*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.webzine .list ul li a .txt h3{
+    font-family: 'Gmarket Sans';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+    color: #1d1d1d;
+    margin: 10px 0 15px 0;
+
+    /*2줄제한 - 조건 block요소여야함 절대padding주면 안됨
+        행간 지정 ....행간 알면 안줘도됨
+        높이 = 행간 * 줄수 1.2 * 2 = 2.4 (단위는 em)
+
+        2줄이상 제한 끝에 ...이 자동으로 생성되지않음
+    */
+    line-height: 1.2;
+    height: 2.4em;
+    overflow: hidden;
+}
+.webzine .list ul li a .txt p{
+    line-height: 1.5;
+    height: 3em;
+    overflow: hidden;
+    font-size: 16px;
+}
+.webzine .more{
+    position: absolute; /*webzine을 기준으로 정렬*/
+    right: 0;
+    top: 0;
 }
 
-@media screen and (max-width:640px){
-    .webzine{
-        margin: 65px 0 0 0;
-        padding: 50px 0 65px 0;
-    }
-    .webzine .tit h2{
-        margin: 0 0 5px 0;
-    }
+@media screen and (min-width:641px){
+    /*****************오버했을때********************/
+            .webzine .list ul li a:hover .photo img{
+                transform: scale3d(1.2, 1.2, 1);
+            }
+            .webzine .list ul li a:hover {
+                transform: translate(0, -5px);
+                box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.25);
+            }
+}/*@media*/
 
-    .webzine .list{
-        height: 200px;
-        width: calc(100% - 20px);
-        top: 20px;
-        left: 20px;
-    }
+@media screen and (max-width:640px){
+                .webzine{
+                    margin: 65px 0 0 0;
+                    padding: 50px 0 65px 0;
+                }
+                .webzine .tit h2{
+                    margin: 0 0 5px 0;
+                }
+
+                .webzine .list{
+                    width: calc(100% - 20px);
+                    top: 20px;
+                    left: 20px;
+                }
 }/*@media*/
 
 .news {
-    margin: 148px 0 0 0;
+    margin: 150px 0 0 0;
     padding: 0;
 }
 .news .wrapper {
@@ -362,7 +420,7 @@ header .tnb .lang{
     margin: 0 0 10px 0;
 }
 .news .list {
-    margin: 85px 0 0 0;
+    margin: 60px 0 0 0;
 }
 .news .list ul li {
     margin: 10px 0 0 0;
@@ -508,7 +566,7 @@ header .tnb .lang{
                         text-align: left;
                     }
                     .news .more {
-                        top: 45px;
+                        top: 20px;
                         border-radius: 50%;
                         padding: 0;
                         width: 38px;
