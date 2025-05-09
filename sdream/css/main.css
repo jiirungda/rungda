@@ -294,11 +294,11 @@ header .tnb .lang{
     background-color: #1976D3;
     color: #fff;
     margin: 150px 0 0 0;
-    padding: 128px 0 150px 0;
+    padding: 130px 0 180px 0;
     position: relative; /*more정렬의 기준*/
 }
 .webzine .tit h2{
-    margin: 0 0 10px 0;
+    margin: 0 0 12px 0;
 }
 .webzine .tit p{
     color: #fff;
@@ -307,7 +307,7 @@ header .tnb .lang{
     width: calc(50% + 630px);
     position: relative;
     left: calc(50% - 630px);
-    padding: 40px 0 5px 0;
+    padding: 60px 0 5px 0;
     overflow: hidden; /*가로 스크롤바 삭제*/
 }
 .webzine .list ul{
@@ -377,39 +377,124 @@ header .tnb .lang{
 }
 .webzine .more{
     position: absolute; /*webzine을 기준으로 정렬*/
-    right: 0;
-    top: 0;
+    right: calc(50% - 630px);
+    /*
+        브라우저 사이즈가 바뀌어도 가운데는 변하지 않음
+        그 가운데로부터 wrapper사이즈 1260의 절반을 더 오른쪽으로 이동
+    */
+    top: 215px;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    padding: 8px 47px 9px 27px;
+    color: #fff;
+}
+.webzine .more::after {
+    content: "";
+    position: absolute; /* more를 기준으로 정렬 */
+    right: 25px;
+    top: 11px;
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_34_15' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='20'%3E%3Crect width='20' height='20' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_34_15)'%3E%3Cpath d='M9.37516 10.6257H4.5835V9.37565H9.37516V4.58398H10.6252V9.37565H15.4168V10.6257H10.6252V15.4173H9.37516V10.6257Z' fill='%23ffffff'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 @media screen and (min-width:641px){
     /*****************오버했을때********************/
-            .webzine .list ul li a:hover .photo img{
+            .webzine .list ul li:hover a .photo img{
                 transform: scale3d(1.2, 1.2, 1);
             }
-            .webzine .list ul li a:hover {
+            .webzine .list ul li:hover a {
                 transform: translate(0, -5px);
                 box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.25);
             }
+            .webzine .more:hover{
+                background-color: #fff;
+                color: #1976D3;
+            }
+            .webzine .more:hover::after{
+                background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_34_15' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='20'%3E%3Crect width='20' height='20' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_34_15)'%3E%3Cpath d='M9.37516 10.6257H4.5835V9.37565H9.37516V4.58398H10.6252V9.37565H15.4168V10.6257H10.6252V15.4173H9.37516V10.6257Z' fill='%231976D3'/%3E%3C/g%3E%3C/svg%3E%0A");
+            }
 }/*@media*/
 
-@media screen and (max-width:640px){
+@media screen and (max-width:640px){ /* 모바일 */
                 .webzine{
                     margin: 65px 0 0 0;
                     padding: 50px 0 65px 0;
                 }
+                .webzine .tit{
+                    margin-right: 60px;
+                }
                 .webzine .tit h2{
                     margin: 0 0 5px 0;
                 }
-
+                .webzine .tit p br {
+                    display: none; /* 줄바꿈 삭제 */
+                }
                 .webzine .list{
-                    width: calc(100% - 20px);
-                    top: 20px;
-                    left: 20px;
+                    width: 100%; /* position속성이*/
+                    left: 0;
+                    padding: 25px 0 10px 22px;
+                    overflow-x: auto; 
+                    /*overflow-x 좌우 auto
+                      list안에 있는 요소가 list보다 넓이가 더 크면
+                      그때만 가로스크롤바가 생김
+                    */
+                }
+                .webzine .list ul{
+                    gap: 20px;
+                    width: 1350px;
+                    /*
+                        li넓이 *li갯수 + li 여백 * li갯수
+                        250 *5 + 20*5 =1250 + 100 = 1350
+                    */
+                }
+                .webzine .list ul li{
+                    width: 250px;
+                }
+                .webzine .list ul li a{
+                    border-radius: 10px;
+                }
+                .webzine .list ul li a .photo{
+                    height: 178px;
+                }
+                .webzine .list ul li a .txt{
+                    padding: 19px 13px 30px 13px;
+                }
+                .webzine .list ul li a .txt strong{
+                    font-size: 15px;
+                }
+                .webzine .list ul li a .txt h3{
+                    font-size: 17px;
+                    margin: 5px 0 9px 0;
+                }
+                .webzine .list ul li a .txt p{
+                    font-size: 15px;
+                }
+                .webzine .more{
+                    right: 20px;
+                    top: 65px;
+                    border: 1px solid #fff;
+                    border-radius: 50%;
+                    padding: 0;
+                    width: 38px;
+                    height: 38px;
+                    color: #fff;
+                }
+                .webzine .more::after {
+                    right: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+                .webzine .more span{
+                    display: none;/*숨김*/
                 }
 }/*@media*/
 
 .news {
-    margin: 150px 0 0 0;
+    margin: 130px 0 0 0;
     padding: 0;
 }
 .news .wrapper {
@@ -515,7 +600,7 @@ header .tnb .lang{
                         position: relative; /* more 정렬의 기준 */
                     }
                     .news .tit{
-                        margin-right: 36px;
+                        margin-right: 60px;
                         /*더보기 아이콘 들어갈 영역을 여백처리함
                         */
                     }
@@ -566,7 +651,7 @@ header .tnb .lang{
                         text-align: left;
                     }
                     .news .more {
-                        top: 20px;
+                        top: 16px;
                         border-radius: 50%;
                         padding: 0;
                         width: 38px;
@@ -584,12 +669,138 @@ header .tnb .lang{
                         display: none;
                     }
 }/*@media*/
-
-
-
+.service{
+    margin: 150px 0 0 0;
+    padding: 130px 0 180px 0;
+    background-color: #EAF3FA;
+}
+.service .tit h2{
+    color: #1976D3;
+    margin: 0 0 10px 0;
+}
+.service .list{
+    margin: 60px 0 0 0;
+}
+.service .list ul{
+    display: flex;
+    justify-content: space-between;
+}
+.service .list ul li{
+    width: calc(33.33% - 16px);
+    /*
+        100% / 한줄에 나올 li 갯수 = 100 / 3 = 33.33
+        한줄에 존재하는 여백의 총합 / 한줄에 나올 li 갯수 = 24+24/3 = 48/3 = 16
+    */
+}
+.service .list ul li a{
+    display: block;
+    background-color: #fff;
+    padding: 27px 0 27px 40px;
+    position: relative; /*after정렬의 기준*/
+}
+.service .list ul li a span{
+    display: block;
+    margin: 0 0 5px 0;
+}
+.service .list ul li a strong{
+    display: block;
+    font-family: 'Gmarket Sans';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+    color: #1D1D1D;
+}
+.service .list ul li a:after{
+    content: "";
+    position: absolute;
+    right: 40px;
+    top: 35px;
+    width: 38px;
+    height: 38px;
+    border: 1px solid #1976D3;
+    border-radius: 50%;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_23_1270' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='20'%3E%3Crect width='20' height='20' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_23_1270)'%3E%3Cpath d='M11.5385 14.712L10.6602 13.8082L13.8429 10.6255H3.75V9.37552H13.8429L10.6602 6.19281L11.5385 5.28906L16.25 10.0005L11.5385 14.712Z' fill='%231976D3'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
+@media screen and (min-width:641px){
+    /*****************오버했을때********************/
+            .service .list ul li:hover a {
+                background-color: #1976D3;
+                color: #fff;
+                box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.25);
+            }
+            .service .list ul li:hover a strong{
+                color: #fff;
+            }
+            .service .list ul li:hover a::after{
+                content: "";
+                position: absolute;
+                right: 40px;
+                top: 35px;
+                width: 38px;
+                height: 38px;
+                border-color: #fff;
+                border-radius: 50%;
+                background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_23_1270' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='20'%3E%3Crect width='20' height='20' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_23_1270)'%3E%3Cpath d='M11.5385 14.712L10.6602 13.8082L13.8429 10.6255H3.75V9.37552H13.8429L10.6602 6.19281L11.5385 5.28906L16.25 10.0005L11.5385 14.712Z' fill='%23ffffff'/%3E%3C/g%3E%3C/svg%3E%0A");
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: 20px;
+            }
+}
+@media screen and (max-width:640px){ /* 모바일 */
+                    .service{
+                        margin: 63px 0 0 0;
+                        padding: 50px 0 65px 0;
+                    }
+                    .service .tit h2{
+                        margin: 0 0 5px 0;
+                    }
+                    .service .tit p br {
+                        display: none; /* 줄바꿈 삭제 */
+                    }
+                    .service .list{
+                        margin: 20px 0 0 0;
+                    }
+                    .service .list ul{
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                    .service .list ul li{
+                        width: calc(33.33% - 10.66px);
+                        /*
+                            100% / 한줄에 나올 li 갯수 = 100 / 3 = 33.33
+                            한줄에 존재하는 여백의 총합 / 한줄에 나올 li 갯수 = 16+16/3 = 32/3 = 10.66
+                        */
+                    }
+                    .service .list ul li a{
+                        padding: 30px 16px 87px 16px;
+                        text-align: center;
+                        height: 100%;
+                    }
+                    .service .list ul li a span{
+                        display: none;
+                    }
+                    .service .list ul li a strong{
+                        font-size: 16px;
+                        font-weight: 400;
+                    }
+                    .service .list ul li a:after{
+                        right: 50%;
+                        top: auto;
+                        transform: translate(50%);
+                        bottom: 20px;
+                        width: 25px;
+                        height: 25px;
+                        background-size: 15px;
+                    }
+}
 
 footer{
-    margin: 1000px 0 0 0;
+    padding: 80px 0 60px 0;
+    background-color: #1d1d1d;
+    color: #A7AFBE;
 }
 
     
