@@ -279,9 +279,9 @@ header .tnb .search{
                     }
                     .book .book_wrap .more::after{
                         right: 0;
-                        top: 1px;
-                        width: 18px;
-                        height: 18px;
+                        top: 2px;
+                        width: 16px;
+                        height: 16px;
                     }
 }/*@media*/
 
