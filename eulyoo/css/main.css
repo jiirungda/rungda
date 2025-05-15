@@ -771,7 +771,7 @@ footer .copyright .f_logo img{
                 }
                 footer .f_info ul{
                     display: flex;
-                    gap: 10px;
+                    gap: 20px;
                 }
                 footer .copyright{
                     position: relative; /*absolute 해제*/ 
