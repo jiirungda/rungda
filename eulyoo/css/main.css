@@ -765,6 +765,10 @@ footer .copyright .f_logo img{
                     font-size: 16px;
                     margin: 40px 0 0 0;
                 }
+                footer .f_info address,
+                footer .f_info ul{
+                    font-size: 15px;
+                }
                 footer .f_info ul{
                     display: flex;
                     gap: 10px;
