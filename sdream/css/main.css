@@ -239,9 +239,8 @@ header .tnb .lang{
         margin: 65px 0 0 0;
     }
     .project .wrapper {
-        display: block; 
-        /* flex해제 -display에서 다른 속성값을 주면 해제 
-           tit/list 위아래로 배치 */
+        justify-content: space-between;
+        align-items: flex-start;
     }
     .project .tit {
         position: relative; /* sticky을 해제하기 위해서 다른 속성을 줌 */
