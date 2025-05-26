@@ -1,0 +1,14 @@
+/*웹폰트를 선언*/
+@font-face {
+    font-family: "Maplestory";
+	font-style: normal;
+    font-weight: 800;
+    src: url('../font/MaplestoryOTFBold.woff') format('woff');
+}
+@font-face {
+    font-family: "Maplestory";
+	font-style: normal;
+    font-weight: 400;
+    src: url('../font/MaplestoryOTFLight.woff') format('woff');
+}
+
