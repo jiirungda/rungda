@@ -44,13 +44,13 @@ $(document).ready(function(){
     }
 
     /*header에 마우스를 오버했을때*/
-    $('header').on('mouseenter', function(){
+    $('header').on('mouseenter focusin', function(){
         if(device_status == "pc"){
             $('header').addClass('fixed')
             //console.log('mouseenter 너냐')
         }
     })
-    $('header').on('mouseleave', function(){
+    $('header').on('mouseleave focusout', function(){
         /*브라우저가 스크롤된 상태에서는 header에 fixed클래스를 삭제하면 안됨
           맨위에 있을때만 삭제해야함*/
         if(scrolling <= 0){
@@ -58,7 +58,7 @@ $(document).ready(function(){
         }//if종료
     })
 
-    $('header .gnb .gnb_wrap ul.depth1 > li').on('mouseenter', function(){
+    $('header .gnb .gnb_wrap ul.depth1 > li').on('mouseenter focusin', function(){
         if(device_status == "pc"){
             //console.log('오버했다')
             $(this).addClass('over')
@@ -67,6 +67,9 @@ $(document).ready(function(){
     $('header .gnb .gnb_wrap ul.depth1 > li').on('mouseleave', function(){
         //console.log('아웃')
         $(this).removeClass('over')
+    })
+    $('header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 > li:last-child').on('focusout', function(){
+        $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('over')
     })
 
     $('header .gnb .gnb_open').on('click', function(){
@@ -120,4 +123,16 @@ $(document).ready(function(){
     })
 
     /********************visual swiper : 종료*********************/
+
+    /********************find 탭 기능 : 시작*********************/
+    let find_content //클릭한 메뉴의 이름(id)
+    $('.find .list .tab_list ul li').on('click', function(){
+        
+        if($(this).hasClass('active') == false){
+            find_content = $(this).attr('data-content') 
+            console.log(find_content)
+        }
+    })
+
+    /********************find 탭 기능 : 종료*********************/
 })
