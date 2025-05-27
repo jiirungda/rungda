@@ -14,6 +14,7 @@ body{
 }
 #wrap{
     position: relative; /*header 정렬의 기준*/
+<<<<<<< HEAD
     overflow-x: hidden;
     width: 100%;
 }
@@ -25,6 +26,19 @@ body{
 }
 @media screen and (max-width:768px){
                 /* 브라우저 넓이가 768px 이하에서만 작동 */
+=======
+    overflow-x: hidden; /*가로스크롤 삭제*/
+    width: 100%;
+}
+@media screen and (max-width:1300px){
+    .wrapper{
+        width: auto;
+        margin: 0 20px;
+    }
+}
+@media screen and (max-width:768px){
+                /* 브라우저 넓이가 640px 이하에서만 작동*/
+>>>>>>> 4b75c92dc8157c855c2efb591b5100fe4da1cc76
                 body{
                     font-size: 16px;
                 }
