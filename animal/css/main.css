@@ -15,12 +15,14 @@
     padding: 10px 0;
     background-color: #CB2A49;
     color: #fff;
-    transform: translateX(-120%);
+    position: absolute;
+    left: 0;
+    top: -1000px;
+    width: 100%;
 }
 .skip_nav a:focus{
-    transform: translateX(0);
+    top: 0;
 }
-
 
 header{
     position: fixed; /*body를 기준으로 정렬*/
@@ -371,7 +373,7 @@ header.fixed .logo a{
     }
     .visual .swiper-slide p{
         font-size: 42px;
-        margin: 350px 0 0 0;
+        margin: 400px 0 0 0;
     }
 }
 @media screen and (max-width:768px){
@@ -466,6 +468,11 @@ header.fixed .logo a{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 0.5s;
+}
+/****************마우스를 오버했을때********************/
+.find .list .tab_content .tab_item > ul > li a:hover .photo img{
+    transform: scale3d(1.2, 1.2, 1);
 }
 .find .list .tab_content .tab_item > ul > li a .subject{
     display: flex;
@@ -519,7 +526,374 @@ header.fixed .logo a{
     overflow: hidden;
     text-overflow: ellipsis;
 }
+@media screen and (max-width:1024px){
+            .find{
+                padding: 80px 0;
+            }
+            .find .tit h2{
+                font-size: 35px;
+            }
+            .find .list{
+                margin: 20px 0 0 0;
+            }
+            .find .list .tab_list ul li button{
+                font-size: 20px;
+                padding: 7px 20px 7px 20px;
+            }
+            .find .list .tab_content{
+                margin: 25px 0 0 0;
+            }
+            .find .list .tab_content .tab_item > ul{
+                gap: 16px 16px;
+                flex-wrap: wrap; /*줄바꿈허용*/
+            }
+            .find .list .tab_content .tab_item > ul > li{
+                width: calc(50% - 8px);
+                /*24+24+24/1줄에 나타나는 li개수*/
+            }
+            .find .list .tab_content .tab_item > ul > li a .photo{
+                height: 250px;
+                border-radius: 15px;
+            }
+}/*@media*/
+@media screen and (max-width:768px){
+    .find{
+        padding: 45px 0;
+    }
+    .find .tit h2{
+        font-size: 25px;
+    }
+    .find .list{
+        margin: 11px 0 0 0;
+    }
+    .find .list .tab_list ul{
+        gap: 4px;
+    }
+    .find .list .tab_list ul li button{
+        font-size: 18px;;
+        padding: 5px 15px 5px 15px;
+    }
+    .find .list .tab_list ul li.item1 button{
+        border-radius: 20px;
+    }
+    .find .list .tab_list ul li.item2 button{
+        border-radius: 20px;
+    }
+    .find .list .tab_content{
+        margin: 15px 0 0 0;
+    }
+    .find .list .tab_content .tab_item > ul > li a .subject{
+        display: block;
+        margin: 12px 0 0 0;
+    }
+    .find .list .tab_content .tab_item > ul > li a .subject strong{
+        padding: 5px 12px 5px 12px;
+        border-radius: 15px;
+        font-size: 16px;
+    }
+    .find .list .tab_content .tab_item > ul > li a .subject h4{
+        margin: 8px 0 0 0;
+        font-size: 18px;
+    }
+    .find .list .tab_content .tab_item > ul > li a ul.detail{
+        margin: 4px 0 0 0;
+    }
+    .find .list .tab_content .tab_item > ul > li a ul.detail li{
+        display: block;
+    }
+    .find .list .tab_content .tab_item > ul > li a ul.detail li:last-child{
+        display: none;
+    }
+    .find .list .tab_content .tab_item > ul > li a ul.detail li strong{
+        display: none;
+    }
+    .find .list .tab_content .tab_item > ul > li a ul.detail li span{
+        display: block;
+        color: rgba(255,255,255,0.6);
+    }
+}/*@media*/
 
+.slogan{
+    margin: 130px;
+}
+.slogan .sub_tit{
+    font-size: 70px;
+    font-weight: 800;
+    color: #1d1d1d;
+    text-align: center;
+}
+.slogan .sub_tit strong{
+    display: inline-block;
+    /*글자를 태그로 감싸고 inline-block을 주면
+      줄바꿈이 될때 inline-block으로 묶인 글자는 단락으로 줄바꿈*/
+}
+.slogan .sub_tit span{
+    display: inline-block;
+    color: transparent;
+    position: relative; /*before정렬의 기준*/
+}
+.slogan .sub_tit span.item1{
+    width: 1.38em;
+    /*넓이가 96px - 글자크기 70px
+      96/70 = 1.37em
+      1em은 현재 해당 요소에 상속된 글자크기를 1로봄*/
+}
+.slogan .sub_tit span.item2{
+    width: 1.38em;
+}
+.slogan .sub_tit span.item3{
+    width: 1.39em;
+}
+.slogan .sub_tit span.item4{
+    width: 1.12em;
+}
+.slogan .sub_tit span::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /*span의 영역에 위아래*/
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+.slogan .sub_tit span.item1::before{
+    width: 1.28em; /*90/70 =1.28em*/
+    height: 1em;/*70/70 =1em*/
+    background-image: url(../images/slogan01.png);
+}
+.slogan .sub_tit span.item2::before{
+    width: 1.24em; /*87/70 =1.24em*/
+    height: 1.07em;/*75/70 =1.07em*/
+    background-image: url(../images/slogan02.png);
+}
+.slogan .sub_tit span.item3::before{
+    top: 40%;
+    width: 1.28em; /*90/70 =1.28em*/
+    height: 1.17em;/*82/70 =1.17em*/
+    background-image: url(../images/slogan03.png);
+}
+.slogan .sub_tit span.item4::before{
+    top: 40%;
+    width: 0.88em; /*62/70 =1.28em*/
+    height: 1.04em;/*73/70 =1.04em*/
+    background-image: url(../images/slogan04.png);
+}
+.slogan .ex{
+    margin: 27px 0 0 0;
+    color: #555;
+    text-align: center;
+}
+@media screen and (max-width:1300px){
+    .slogan .sub_tit{
+        font-size: 50px;
+    }
+}
+@media screen and (max-width:1024px){
+    .slogan .sub_tit{
+        font-size: 42px;
+    }
+    .slogan .ex br{
+        display: none;
+    }
+}
+@media screen and (max-width:768px){
+    .slogan{
+        margin: 66px 0 0 0;
+    }
+    .slogan .sub_tit{
+        font-size: 30px;
+    }
+    .slogan .sub_tit br{
+        display: none; /*줄바꿈금지*/
+    }
+    .slogan .ex{
+        margin: 20px 0 0 0;
+        font-size: 16px;
+    }
+    
+}/*@media*/
+
+.adopt{
+    margin: 140px 0 0 0;
+    padding: 130px 0 262px 0;
+    background-color: #072727;
+    color: #fff;
+    text-align: center;
+    position: relative; /*rolling 정렬의 기준*/
+}
+.adopt .tit h2{
+    font-size: 45px;
+    font-weight: 800;
+}
+.adopt .list{
+    margin: 60px 0 0 0;
+}
+.adopt .list .swiper-slide{
+    width: 280px;
+}
+.adopt .list .swiper-slide a{
+    display: block;
+}
+.adopt .list .swiper-slide a .photo{
+    overflow: hidden;
+    height: 280px;
+    border-radius: 50%; /*동그라미*/
+}
+.adopt .list .swiper-slide a .photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+.adopt .list .swiper-slide a:hover .photo img{
+    transform: scale3d(1.2, 1.2, 1);
+}
+.adopt .list .swiper-slide a strong{
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.2;
+    padding: 5px 20px 5px 20px;
+    background-color: #FE457E;
+    border-radius: 30px;
+    display: inline-block;
+    transform: translateY(-17px);
+}
+.adopt .list .swiper-slide a h3{
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 0 5px 0;
+}
+.adopt .list .swiper-slide a p{
+    color: rgba(255,255,255,0.8);
+    white-space: nowrap; /*1줄제한*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.adopt .list .swiper-slide a strong.cate_care{
+    background-color: #2FB1BE;
+}
+.adopt .list_ctrl{
+    margin: 57px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+}
+.adopt .list_ctrl button{
+    width: 21px;
+    height: 21px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url("data:image/svg+xml,%3Csvg width='11' height='11' viewBox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_26_1021' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='11' height='11'%3E%3Crect width='11' height='11' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_26_1021)'%3E%3Cpath d='M7.33333 10.0827L2.75 5.49935L7.33333 0.916016L8.14687 1.72956L4.37708 5.49935L8.14687 9.26914L7.33333 10.0827Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.adopt .list_ctrl button.btn_next{
+    transform: rotate(180deg);
+}
+.adopt .list_ctrl .more{
+    line-height: 21px;
+    height: 21px;
+    border: 1px solid #ffff;
+    border-radius: 10px;
+    padding: 0 17px 0 7px;
+    font-size: 10px;
+    position: relative;
+}
+.adopt .list_ctrl .more::before{
+    content: "";
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    width: 10px;
+    height: 10px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.58333 7.74902V4.41569H0.25V3.58236H3.58333V0.249023H4.41667V3.58236H7.75V4.41569H4.41667V7.74902H3.58333Z' fill='white'/%3E%3C/svg%3E%0A");
+}
+.adopt .rolling{
+    position: absolute; /*adopt 기준으로 정렬*/
+    left: 0;
+    bottom: 70px;
+    width: 100%;
+}
+.adopt .rolling p{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 80px;
+    font-weight: 800;
+    color: rgba(255,255,255,0.05);
+    white-space: nowrap; /*1줄*/
+
+    animation-name: rolling;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; /*가속도 삭제*/
+}
+
+@keyframes rolling {
+    0% {left: 0;}
+    100% {left: -16.88em;}
+}
+@media screen and (max-width:1024px){
+    .adopt .tit h2{
+        font-size: 42px;
+    }
+    .adopt .list .swiper-slide{
+        width: 200px;
+    }
+    .adopt .list .swiper-slide a .photo{
+        height: 200px;
+    }
+    .adopt .rolling p{
+        font-size: 60px;
+    }
+}
+@media screen and (max-width:768px){
+    .adopt{
+        margin: 60px 0 0 0;
+        padding: 45px 0 125px 0;
+    }
+    .adopt .tit h2{
+        font-size: 25px;
+    }
+    .adopt .list{
+        margin: 20px 0 0 0;
+    }
+    .adopt .list .swiper{
+        padding-left: 16px;
+    }
+    .adopt .list .swiper-slide{
+        width: 197px;
+    }
+    .adopt .list .swiper-slide a .photo{
+        height: 197px;
+    }
+    .adopt .list .swiper-slide a strong{
+        font-size: 15px;
+        padding: 4px 16px 4px 16px;
+        transform: translateY(-17px);
+    }
+    .adopt .list .swiper-slide a h3{
+        font-size: 18px;
+        margin: 0 0 3px 0;
+    }
+    .adopt .list_ctrl{
+        margin: 26px 0 34px 0;
+    }
+    .adopt .list_ctrl button{
+        display: none;
+    }
+    .adopt .rolling{
+        bottom: 55px;
+    }
+    .adopt .rolling p{
+        font-size: 50px;
+    }
+}/*@media*/
 
 footer{
     margin: 500px 0 0 0;
