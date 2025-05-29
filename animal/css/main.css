@@ -48,6 +48,7 @@ header .logo a{
 header.fixed{
     background-color: #fff;
     color: #1d1d1d;
+    border: 1px solid #EDEDED;
 }
 header.fixed .logo a{
     display: block;
