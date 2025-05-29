@@ -1032,6 +1032,10 @@ header.fixed .logo a{
     .review .more strong{
         font-size: 42px;
     }
+    .review .list .swiper-slide a h3{
+        margin: 12px 0 8px 0;
+        font-size: 22px;
+    }
     .review .more::after{
         right: 8px;
         top: 5px;
