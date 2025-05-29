@@ -1101,6 +1101,7 @@ footer .wrapper{
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    font-size: 20px;
 }
 footer .top{
     position: absolute;
