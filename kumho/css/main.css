@@ -552,3 +552,46 @@ section .tit h2{
 .service .list ul li a:hover .more{
     display: inline-block;
 }
+@media screen and (max-width:1024px){
+    .service .list ul li a h3{
+        font-size: 1.875rem;/*30/16*/
+    }
+    .service .list ul li a .more{
+        display: none;
+    }
+    .service .list ul li a:hover .more{
+        display: none;
+    }
+}
+@media screen and (max-width:768px){
+    .service .list{
+        height: auto; 
+        display: block; 
+    }
+    .service .list ul{
+        display: block;
+        width: auto; /*list가 flex의 영향으로 넓이가 필요*/
+        padding: 0;
+    }
+    .service .list ul li{
+        width: auto;
+    }
+    .service .list ul li + li::before{
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        width: 11em;
+        height: 1px;
+    }
+    .service .list ul li a{
+        display: inline-block;
+        margin: 0;
+        padding: 2em 0;
+    }
+    .service .list ul li a h3{
+        font-size: 1.56rem;/*25/16*/
+        font-weight: var(--bold-weight);
+        line-height: var(--tit-line-height);
+        margin: 0 0 0.31em 0;
+    }
+}
