@@ -451,6 +451,11 @@ footer .copyright{
         position: relative; /*ul정렬의기준*/
         margin: 0 0 2em 0;
     }
+    footer .family_site .family_open{
+        padding: 0.47em 2.88em 0.47em 1.35em;
+        width: 100%;
+        max-width: 800px;
+    }
     footer .top{
         position: absolute; /*wrapper*/
         right: 0;
