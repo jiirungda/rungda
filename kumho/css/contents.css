@@ -73,6 +73,49 @@
     height: 618px;
     border: 0;
 }
+.ctn_map .wrapper{
+    display: block;
+    padding: 62px 0 120px 0;
+}
+.ctn_map .wrapper .map{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 80px 0;
+}
+
+.ctn_map .wrapper h3{
+    font-size: 35px;
+    font-weight: var(--bold-weight);
+    color: #1d1d1d;
+    line-height: var(--tit-line-height);
+    
+}
+.ctn_map .wrapper ul.sns {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+}
+.ctn_map .wrapper ul.sns li a{
+    padding: 15px 27px 15px 60px;
+    border: 1px solid #666;
+    border-radius: 33px;
+}
+.ctn_map .wrapper ul.sns li.kakao a{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg width='15' height='21' viewBox='0 0 15 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_202_1065)'%3E%3Cpath d='M7.49896 0.000711602C3.35429 -0.00212061 0.00616595 3.31215 7.88594e-06 7.41291C-0.00283877 9.27217 0.765234 10.8605 1.92289 12.2149C4.03412 14.6849 5.88125 17.2858 6.88978 20.4076C6.98087 20.6894 7.11647 21.0095 7.50617 20.9997C7.93014 20.9891 8.04407 20.6304 8.14469 20.3268C9.09111 17.4704 10.6723 15.0026 12.6703 12.7616C13.858 11.4294 14.8105 9.89439 14.9703 8.09136C15.36 3.69733 11.8674 -0.0594007 7.49896 0.000711602ZM10.0481 7.48319C10.038 8.83988 8.83718 10.0266 7.48694 10.0144C6.12513 10.0021 4.9422 8.81144 4.94749 7.45863C4.95278 6.10731 6.15372 4.92206 7.51163 4.9283C8.86698 4.93443 10.058 6.13425 10.0481 7.48313V7.48319Z' fill='%23007DFD'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_202_1065'%3E%3Crect width='15' height='21' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A"); 
+}
+.ctn_map .wrapper ul.call li,
+.ctn_map .wrapper ul.bus li{
+    display: flex;
+}
+.ctn_map .wrapper ul.call li strong,
+.ctn_map .wrapper ul.bus li strong{
+    font-size: 25px;
+    font-weight: var(--bold-weight);
+    line-height: var(--tit-line-height);
+    color: #1d1d1d;
+}
 @media screen and (max-width:1300px){
     .ctn_map .map {
         left: 20px;
