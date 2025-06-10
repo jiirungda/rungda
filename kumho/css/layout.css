@@ -53,7 +53,7 @@ header .util .search .search_open::before {
     content: "";
     position: absolute;
     left: 10px;
-    top: -13px;
+    top: -12px;
     width: 18px;
     height: 18px;
     background-position: center center;

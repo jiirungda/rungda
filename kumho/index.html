@@ -8,6 +8,9 @@
     <!--swiper 라이브러리-->
     <script src="js/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <!--aos-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
 
     <link rel="stylesheet" href="css/main.css">
     <script src="js/main.js"></script>
@@ -32,7 +35,7 @@
                             <button class="lang_open"><span>KR</span></button>
                         </div><!--//lang-->
                         <div class="search">
-                            <button class="search_open"><span>검색</span></button>
+                            <button class="search_open"><span class="blind">검색</span></button>
                         </div><!--//search-->
                     </div><!--//gnb_util-->
                     <ul class="depth1">
@@ -154,14 +157,14 @@
                 </div>
                 <div class="scroll_down"><span>scroll down</span></div>
             </section>
-            <section class="biz">
+            <section class="biz" >
                 <div class="tit">
                     <div class="wrapper">
                         <strong>BUSINESS</strong>
                         <h2>글로벌넘버원에 도전합니다</h2>
                     </div>
                 </div>
-                <div class="list">
+                <div class="list" data-aos="fade-up">
                     <ul>
                         <!-- 마우스를 오버하면 on클래스 추가 -->
                         <li>
@@ -204,7 +207,7 @@
                 </div>
             </section>
             <section class="news">
-                <div class="tit">
+                <div class="tit" data-aos="fade-up">
                     <div class="wrapper">
                         <strong>NEWS</strong>
                         <h2>고객의 곁에서 함께합니다</h2>
@@ -264,7 +267,7 @@
                         </ul>
                     </div><!--//swiper-->
                 </div><!--//list-->
-                <div class="ctrl_wrap">
+                <div class="ctrl_wrap" >
                     <div class="wrapper">
                         <div class="group1">
                             <div class="swiper-scrollbar"></div>
@@ -278,7 +281,7 @@
                     </div>
                 </div><!--//ctrl_wrap-->
             </section>
-            <section class="service">
+            <section class="service" data-aos="fade-up">
                 <div class="tit">
                     <div class="wrapper">
                         <strong>KUMHO</strong>
