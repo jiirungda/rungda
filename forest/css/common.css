@@ -76,6 +76,7 @@ html, body {
     --tit-font-size: 45px;
     --tit-line-height: 1.2;
     --sub-tit-size: 25px;
+    --display-size: 65px;
 }
 @media screen and (max-width:1024px){
     :root {
@@ -83,11 +84,13 @@ html, body {
         --header-h-m: -56px;
         --tit-font-size: 35px;
         --tit-font-size: 22px;
+        --display-size: 50px;
     }
 }
 @media screen and (max-width:768px){
     :root {
         --tit-font-size: 25px;
         --tit-font-size: 20px;
+        --display-size: 40px;
     }
 }
