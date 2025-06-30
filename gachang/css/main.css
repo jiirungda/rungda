@@ -4,8 +4,7 @@
 @import url(layout.css);
 
 .visual{
-    height: 100vh;
-    min-height: 700px;
+    height: 1000px;
     background: url(../imges/main/visual_bg.jpg) no-repeat center center / cover;
     color: #fff;
     text-align: center;
@@ -55,10 +54,65 @@
     }
 }
 @media screen and (max-width:768px){
+    .visual{
+        height: 700px;
+    }
     .visual h2{
+        padding: 270px 0 5px 0;
         font-size: 40px;
     }
 }
-footer{
-    margin: 0 0 400px 0;
+.canvas{
+    margin: 140px 0;
+    text-align: center;
+}
+.canvas .wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.canvas .wrapper .info_box img{
+    width: 86px;
+}
+.canvas .wrapper .info_box{
+    width: 33.3%;
+    
+}
+.canvas .wrapper .info_box h3{
+    font-size: var(--sub-font-size);
+    font-weight: var(--bold-weight);
+    color: var(--tit-color);
+}
+.canvas .wrapper .info_box p{
+    padding: 10px 0 20px 0;
+}
+.canvas .wrapper .info_box a{
+    padding: 6px 20px 6px 20px;
+    color: var(--tit-color);
+    border: 1px solid #1d1d1d;
+    border-radius: 20px;
+    display: inline-block;
+}
+.canvas .wrapper .info_box a:hover{
+    background-color: #F6F3F1;
+    font-weight: var(--bold-weight);
+}
+@media screen and (max-width:768px){
+    .canvas{
+        margin: 50px 0;
+    }
+    .canvas .wrapper .info_box{
+        width: 50%;
+    }
+    .canvas .wrapper .info_box img{
+        width: 47px;
+    }
+    .canvas .wrapper .info_box h3,
+    .canvas .wrapper .info_box p{
+        display: none;
+    }
+    .canvas .wrapper .info_box a{
+        padding: 0;
+        color: var(--tit-color);
+        border: none;
+    }
 }

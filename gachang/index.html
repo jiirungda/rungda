@@ -16,29 +16,26 @@
         <!-- 
             고정될때 fixed 
             메뉴가 상단으로 사라질때 gnb_up 
-            pc버전에서 메뉴에 마우스를 오버하면 menu_over 
-            mobile버전에서 메뉴를 클릭하면 menu_open 
+            pc버전에서 메뉴에 마우스를 오버하면 menu_over
         -->
         <header>
-            <h1 class="logo"><a href="index.html"><span>가창글램핑</span></a></h1>
+            <h1 class="logo"><a href="index.html"><span class="blind">가창글램핑</span></a></h1>
             <nav class="gnb">
-                <button class="gnb_open"><sapn>메뉴열기</sapn></button>
+                <button class="gnb_open"><sapn class="blind">메뉴열기</sapn></button>
                 <div class="gnb_wrap">
                     <ul class="depth1"><!--1차메뉴-->
                         <li>
                             <a href="#"><span>ABOUT</span></a>
-                            <ul class="depth2">
+                            <ul class="depth2"><!--2차메뉴-->
                                 <li><a href="#"><span>글램핑소개</span></a></li>
                                 <li><a href="#"><span>외부전경</span></a></li>
                                 <li><a href="#"><span>체험&낚시</span></a></li>
                                 <li><a href="#"><span>오시는길</span></a></li>
                             </ul>
                         </li>
-                    </ul>
-                    <ul class="depth1"><!--1차메뉴-->
                         <li>
                             <a href="#"><span>ROOMS</span></a>
-                            <ul class="depth2">
+                            <ul class="depth2"><!--2차메뉴-->
                                 <li><a href="#"><span>객실배치도</span></a></li>
                                 <li><a href="#"><span>텐트A타입</span></a></li>
                                 <li><a href="#"><span>텐트B타입</span></a></li>
@@ -46,11 +43,9 @@
                                 <li><a href="#"><span>독채</span></a></li>
                             </ul>
                         </li>
-                    </ul>
-                    <ul class="depth1"><!--1차메뉴-->
                         <li>
                             <a href="#"><span>FACILITIES</span></a>
-                            <ul class="depth2">
+                            <ul class="depth2"><!--2차메뉴-->
                                 <li><a href="#"><span>야외수영장</span></a></li>
                                 <li><a href="#"><span>야외바베큐</span></a></li>
                                 <li><a href="#"><span>트램플린</span></a></li>
@@ -59,25 +54,23 @@
                                 <li><a href="#"><span>족구장</span></a></li>
                             </ul>
                         </li>
-                    </ul>
-                    <ul class="depth1"><!--1차메뉴-->
                         <li>
                             <a href="#"><span>NOTICE</span></a>
-                            <ul class="depth2">
+                            <ul class="depth2"><!--2차메뉴-->
                                 <li><a href="#"><span>공지사항</span></a></li>
                                 <li><a href="#"><span>갤러리</span></a></li>
                                 <li><a href="#"><span>rieview</span></a></li>
                                 <li><a href="#"><span>문의하기</span></a></li>
                             </ul>
                         </li>
-                    </ul>
-                    <ul class="depth1"><!--1차메뉴-->
                         <li>
                             <a href="#"><span>TOUR</span></a>
                         </li>
                     </ul>
-                </div>
+                </div><!--gnb_wrap-->
+                <button class="gnb_close"><span class="blind">메뉴닫기</span></button>
             </nav>
+            <div class="nesv"><a href="#"><span>실시간예약</span></a></div>
         </header>
         <main class="container">
             <section class="visual">
@@ -87,7 +80,28 @@
                 </div>
                 <div class="scroll_down"><span>scroll down</span></div>
             </section><!--visual-->
-            <section class="canvas"></section>
+            <section class="canvas">
+                <div class="wrapper">
+                    <div class="info_box">
+                        <img src="imges/main/canvas01.png" alt="">
+                        <h3>ABOUT</h3>
+                        <p>전통적인 캠핑과 편의성을 모두 갖춘<br>자연의 휴식처 가창글램핑장입니다</p>
+                        <a href=""><span>가창글램핑 소개</span></a>
+                    </div>
+                    <div class="info_box">
+                        <img src="imges/main/canvas02.png" alt="">
+                        <h3>NOTICE</h3>
+                        <p>예약전/후 안내사항을 꼭 확인해주세요<br>당일 예약은 당일 취소 불가합니다</p>
+                        <a href=""><span>예약 및 이용안내</span></a>
+                    </div>
+                    <div class="info_box">
+                        <img src="imges/main/canvas03.png" alt="">
+                        <h3>Q&A</h3>
+                        <p>문의주시면 모든 질문에<br>빠르게 답변해드리겠습니다</p>
+                        <a href=""><span>1:1 문의하기</span></a>
+                    </div>
+                </div>
+            </section>
             <section class="room"></section>
             <section class="banner"></section>
             <section class="service"></section>
