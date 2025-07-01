@@ -84,6 +84,7 @@
     font-size: var(--sub-font-size);
     font-weight: var(--bold-weight);
     color: var(--tit-color);
+    line-height: var(--tit-line-height);
 }
 .canvas .wrapper .info_box p{
     padding: 10px 0 20px 0;
@@ -137,4 +138,298 @@
       display: inline;
     }
 
+}
+.room{
+    margin: 140px 0 0 0;
+    background-color: #F6F3F1;
+    padding: 140px 0 120px 0;
+}
+.room .tit h2{
+    font-size: var(--tit-font-size);
+    font-weight: var(--bold-weight);
+    line-height: var(--tit-line-height);
+    color: var(--point-color);
+}
+.room .tit p{
+    padding: 10px 0 30px 0;
+}
+.room .list ul{
+    display: flex;
+    justify-content: space-between;
+}
+.room .list ul li{
+    width: calc(25% - 18px );
+    /* 100%/1줄에나타나는 li의 갯수 - 한줄의여백의합/1줄에나타나는 li의 갯수px */
+}
+.room .list ul li .photo{
+    overflow: hidden;
+    height: 289px;
+}
+.room .list ul li .photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.room .list ul li .subject{
+    display: flex;
+    align-items: flex-end;;
+    padding: 15px 0 10px 0;
+    gap: 20px;
+}
+.room .list ul li .subject h3{
+    font-size: var(--sub-font-size);
+    font-weight: var(--bold-weight);
+    line-height: var(--tit-line-height);
+    color: var(--tit-color);
+}
+.room .list ul li .subject p{
+    position: relative;
+}
+.room .list ul li .subject p::after{
+    content: "";
+    position: absolute;
+    left: -9px;
+    top: 6px;
+    width: 1px;
+    height: 13px;
+    background-color: rgba(29, 29, 29, 0.4);
+}
+.room .list ul li .capacity p{
+    padding: 0 0 30px 0;
+}
+.room .list ul li .link{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+.room .list ul li .link a{
+     /* 100%/1줄에나타나는 li의 갯수 - 한줄의여백의합/1줄에나타나는 li의 갯수px */
+    width: calc(50% - 12px);
+    padding: 6px 0;
+    border: 1px solid #555;
+    text-align: center;
+    transition: 0.5s;
+}
+.room .list ul li .link a:hover{
+    color: #fff;
+    background-color: var(--point-color);
+    border-color: transparent;
+}
+
+@media screen and (max-width: 1176px){
+    .room .list ul li .subject p{
+        display: none;
+    }
+    .room .list ul li .capacity p{
+        padding: 0 0 20px 0;
+    }
+    .room .list ul li .link{
+        gap: 10px;
+    }
+    .room .list ul li .link a{
+        width: 100%;
+        padding: 5px 0;
+    }
+}
+@media screen and (max-width: 768px){
+    .room{
+        margin: 50px 0 0 0;
+        padding: 60px 0 80px 0;
+    }
+    .room .tit h2{
+        padding: 0 0 20px 0;
+    }
+    .room .tit p{
+        display: none;
+    }
+    .room .list ul{
+        gap: 16px 16px;
+        flex-wrap: wrap;
+    }
+    .room .list ul li{
+        width: calc(50% - 8px );
+        /* 100%/1줄에나타나는 li의 갯수 - 한줄의여백의합/1줄에나타나는 li의 갯수px */
+    }
+    .room .list ul li .photo{
+        overflow: hidden;
+        height: 147px;
+    }
+    .room .list ul li .subject{
+        display: block;
+        padding: 10px 0 5px 0;
+    }
+    .room .list ul li .capacity p{
+        padding: 0 0 15px 0;
+    }
+    .room .list ul li .link{
+        gap: 6px;
+    }
+}
+.banner{
+    background: url(../imges/main/banner_bg.jpg) no-repeat center center / cover;
+    height: 160px;
+    text-align: center;
+}
+.banner .wrapper h3{
+    padding: 36px 0 15px 0;
+    font-size: var(--sub-font-size);
+    font-weight: var(--bold-weight);
+    color: #fff;
+}
+.banner .wrapper a{
+    display: inline-block;
+    padding: 3px 30px;
+    border: 1px solid rgba(255,255,255,0.8);
+    border-radius: 20px;
+    font-size: 15px;
+    color: rgba(255,255,255,0.8);
+}
+@media screen and (max-width: 1024px){
+    .banner{
+        height: 100px;
+    }
+    .banner .wrapper h3{
+        padding: 20px 0 5px 0;
+    }
+    .banner .wrapper a{
+        padding: 2px 20px;
+        font-size: 12px;
+    }
+}
+.service{
+    margin: 140px 0 120px 0;
+}
+.service .tit h2{
+    font-size: var(--tit-font-size);
+    font-weight: var(--bold-weight);
+    color: var(--point-color);
+    line-height: var(--tit-line-height);
+}
+.service .tit p{
+    padding: 10px 0 50px 0;
+}
+.service .list ul{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    gap: 24px;
+}
+.service .list ul li{
+    width: 295px;
+}
+.service .list ul li a{
+    display: block;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.service .list ul li a .photo{
+    overflow: hidden;
+    height: 300px;
+}
+.service .list ul li a .photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+.service .list ul li a .text{
+    padding: 25px 0 22px 0;
+}
+.service .list ul li a .text h3{
+    font-size: var(--sub-font-size);
+    line-height: var(--tit-line-height);
+    color: var(--tit-color);
+}
+.service .list ul li a .text p{
+    padding: 12px 0;
+}
+.service .list ul li a .text span{
+    display: inline-block;
+    margin: 10px 0 0 0;
+    padding: 0 20px 0 0;
+    position: relative;
+}
+.service .list ul li a .text span::after{
+    content: "";
+    position: absolute;
+    right: 2px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_218_227' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='16' height='16'%3E%3Crect width='16' height='16' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_218_227)'%3E%3Cpath d='M7.28571 8.71429H3V7.28571H7.28571V3H8.71429V7.28571H13V8.71429H8.71429V13H7.28571V8.71429Z' fill='%23555555'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+@media screen and (min-width: 769px){
+    /*****오버했을때****/
+    .service .list ul li a:hover{
+        transform: translate(0, -30px);
+        box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.25);
+    }
+    .service .list ul li a:hover .photo img{
+        transform: scale3d(1.2, 1.2, 1);
+    }
+    .service .list ul li a .text span::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        width: 0;
+        height: 1px;
+        background-color: rgba(29, 29, 29, 0.8);
+        transition: 0.5s;
+    }
+    .service .list ul li a:hover .text span::before{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 768px){
+    .service{
+        margin: 40px 0 80px 0;
+    }
+    .service .tit h2{
+        padding: 0 0 30px 0;
+        font-size: var(--tit-font-size);
+        font-weight: var(--bold-weight);
+        color: var(--point-color);
+        line-height: var(--tit-line-height);
+    }
+    .service .tit p{
+        display: none;
+    }
+    .service .list{
+        width: 100%; /* position속성이*/
+        left: 0;
+        padding: 25px 0 10px 22px;
+        overflow-x: auto; 
+        /*overflow-x 좌우 auto
+            list안에 있는 요소가 list보다 넓이가 더 크면
+            그때만 가로스크롤바가 생김
+        */
+    }
+    .service .list ul{
+        gap: 16px;
+    }
+    .service .list ul li{
+        width: 208px;
+    }
+    .service .list ul li a .photo{
+        height: 210px;
+    }
+    .service .list ul li a .text{
+        padding: 10px 0 10px 0;
+    }
+    .service .list ul li a .text p{
+        padding: 5px 0;
+    }
+    .service .list ul li a .text span{
+        margin: 0;
+    }
+    .service .list ul li a .text span::after{
+        right: 3px;
+        top: 4px;
+    }
 }
