@@ -308,50 +308,53 @@
 .service .tit p{
     padding: 10px 0 50px 0;
 }
-.service .list ul{
+.service .list {
+    width: 100%;
+  }
+.service .list .swiper-wrapper{
     display: flex;
     justify-content: space-between;
     text-align: center;
     gap: 24px;
 }
-.service .list ul li{
-    width: 295px;
+.service .list .swiper-wrapper .swiper-slide{
+    width: 297px;
 }
-.service .list ul li a{
+.service .list .swiper-wrapper .swiper-slide a{
     display: block;
     background-color: #fff;
     border: 1px solid #ccc;
     overflow: hidden;
     transition: 0.5s;
 }
-.service .list ul li a .photo{
+.service .list .swiper-wrapper .swiper-slide a .photo{
     overflow: hidden;
     height: 300px;
 }
-.service .list ul li a .photo img{
+.service .list .swiper-wrapper .swiper-slide a .photo img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: 0.5s;
 }
-.service .list ul li a .text{
+.service .list .swiper-wrapper .swiper-slide a .text{
     padding: 25px 0 22px 0;
 }
-.service .list ul li a .text h3{
+.service .list .swiper-wrapper .swiper-slide a .text h3{
     font-size: var(--sub-font-size);
     line-height: var(--tit-line-height);
     color: var(--tit-color);
 }
-.service .list ul li a .text p{
+.service .list .swiper-wrapper .swiper-slide a .text p{
     padding: 12px 0;
 }
-.service .list ul li a .text span{
+.service .list .swiper-wrapper .swiper-slide a .text span{
     display: inline-block;
     margin: 10px 0 0 0;
     padding: 0 20px 0 0;
     position: relative;
 }
-.service .list ul li a .text span::after{
+.service .list .swiper-wrapper .swiper-slide a .text span::after{
     content: "";
     position: absolute;
     right: 2px;
@@ -365,14 +368,14 @@
 
 @media screen and (min-width: 769px){
     /*****오버했을때****/
-    .service .list ul li a:hover{
+    .service .list .swiper-wrapper .swiper-slide a:hover{
         transform: translate(0, -30px);
         box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.25);
     }
-    .service .list ul li a:hover .photo img{
+    .service .list .swiper-wrapper .swiper-slide a:hover .photo img{
         transform: scale3d(1.2, 1.2, 1);
     }
-    .service .list ul li a .text span::before{
+    .service .list .swiper-wrapper .swiper-slide a .text span::before{
         content: "";
         position: absolute;
         left: 0;
@@ -382,7 +385,7 @@
         background-color: rgba(29, 29, 29, 0.8);
         transition: 0.5s;
     }
-    .service .list ul li a:hover .text span::before{
+    .service .list .swiper-wrapper .swiper-slide a:hover .text span::before{
         width: 100%;
     }
 }
@@ -410,26 +413,26 @@
             그때만 가로스크롤바가 생김
         */
     }
-    .service .list ul{
+    .service .list .swiper-wrapper{
         gap: 16px;
     }
-    .service .list ul li{
+    .service .list .swiper-wrapper .swiper-slide{
         width: 208px;
     }
-    .service .list ul li a .photo{
+    .service .list .swiper-wrapper .swiper-slide a .photo{
         height: 210px;
     }
-    .service .list ul li a .text{
+    .service .list .swiper-wrapper .swiper-slide a .text{
         padding: 10px 0 10px 0;
     }
-    .service .list ul li a .text p{
+    .service .list .swiper-wrapper .swiper-slide a .text p{
         padding: 5px 0;
     }
-    .service .list ul li a .text span{
+    .service .list .swiper-wrapper .swiper-slide a .text span{
         margin: 0;
     }
-    .service .list ul li a .text span::after{
+    .service .list .swiper-wrapper .swiper-slide a .text span::after{
         right: 3px;
         top: 4px;
     }
-}
+  }
