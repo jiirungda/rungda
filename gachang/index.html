@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!--jquery 라이브러리-->
     <script src="js/jquery-3.7.1.min.js"></script>
+
+    <!--swiper 라이브러리-->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <script src="js/swiper-bundle.min.js"></script>
 
     <link rel="stylesheet" href="css/main.css">
     <script src="js/main.js"></script>
@@ -183,48 +188,50 @@
                         <p>자연 속에서 누릴 다양한 즐거움과 함께, 특별한 하루를 준비했습니다</p>
                     </div>
                     <div class="list">
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <div class="photo"><img src="imges/main/service01.jpg" alt=""></div>
-                                    <div class="text">
-                                        <h3>야외수영장</h3>
-                                        <p>햇살 가득한 야외수영장에서<br>시원한 하루를 즐기세요.</p>
-                                        <span>view more</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div class="photo"><img src="imges/main/service02.jpg" alt=""></div>
-                                    <div class="text">
-                                        <h3>야외바베큐</h3>
-                                        <p>노을빛 바베큐로 특별한<br>저녁을 즐겨보세요.</p>
-                                        <span>view more</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div class="photo"><img src="imges/main/service03.jpg" alt=""></div>
-                                    <div class="text">
-                                        <h3>부대시설 및 체험</h3>
-                                        <p>알차게 준비된 체험과 시설로<br>캠핑의 재미를 더해보세요.</p>
-                                        <span>view more</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div class="photo"><img src="imges/main/service04.jpg" alt=""></div>
-                                    <div class="text">
-                                        <h3>주변관광지</h3>
-                                        <p>글램핑장 주변에서<br>소소한 즐거움을 만나보세요.</p>
-                                        <span>view more</span>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
+                        <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소-->
+                            <ul class="swiper-wrapper"><!-- 각 팝업 콘텐츠를 감싸는 요소-->
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <div class="photo"><img src="imges/main/service01.jpg" alt=""></div>
+                                        <div class="text">
+                                            <h3>야외수영장</h3>
+                                            <p>햇살 가득한 야외수영장에서<br>시원한 하루를 즐기세요.</p>
+                                            <span>view more</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <div class="photo"><img src="imges/main/service02.jpg" alt=""></div>
+                                        <div class="text">
+                                            <h3>야외바베큐</h3>
+                                            <p>노을빛 바베큐로 특별한<br>저녁을 즐겨보세요.</p>
+                                            <span>view more</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <div class="photo"><img src="imges/main/service03.jpg" alt=""></div>
+                                        <div class="text">
+                                            <h3>부대시설 및 체험</h3>
+                                            <p>알차게 준비된 체험과 시설로<br>캠핑의 재미를 더해보세요.</p>
+                                            <span>view more</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <div class="photo"><img src="imges/main/service04.jpg" alt=""></div>
+                                        <div class="text">
+                                            <h3>주변관광지</h3>
+                                            <p>글램핑장 주변에서<br>소소한 즐거움을 만나보세요.</p>
+                                            <span>view more</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </section>
