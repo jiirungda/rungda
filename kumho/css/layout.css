@@ -326,12 +326,6 @@ header.menu_over .util .search .search_open::after {
                 transform: rotate(180deg);
             }
             /* 메뉴가 열렸을때 */
-            header.menu_open .gnb .gnb_util{
-                display: flex;
-            }
-            header.menu_open .gnb .gnb_wrap {
-                right: 0;
-            }
             header.menu_open .gnb .gnb_close {
                 display: block;
             }
