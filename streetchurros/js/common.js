@@ -22,7 +22,7 @@ let mobile_size = 1024 //모바일로 변경되는 사이트
 let menu_open //모바일에서 사용할 메뉴가 열렸는지 여부
 
 $(window).scroll(function(){//브라우저가 스크롤 될때마다 1번 실행
-    console.log('브라우저가 스크롤 된다 된다!!!!!!!!')
+    //console.log('브라우저가 스크롤 된다 된다!!!!!!!!')
     scroll_chk()
 })
 $(window).resize(function(){//리사이즈 될때마다 1번실행
