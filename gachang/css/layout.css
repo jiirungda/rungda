@@ -75,7 +75,7 @@ header.menu_over .nesv::before{
     }
     header .gnb .gnb_wrap ul.depth1 > li > a {
         display: block;
-        line-height: var(--header-h);
+        line-height: var(--tit-line-height);
         font-size: 22px;
         font-weight: var(--bold-weight);
     }
