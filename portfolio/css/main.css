@@ -1,5 +1,87 @@
 @import url(default.css);
 @import url(font.css);
 @import url(common.css);
-@import url(layout.css);
 
+.section{
+    background-color: var(--main-color);
+}
+.main .photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.profile .wrapper{
+    display: flex;
+    align-items: center;
+}
+.profile .left{
+    position: relative;
+    text-align: center;
+    color: var(--point-color);
+    width: 506px;
+}
+.profile .left::before{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1px;
+    height: 596px;
+    background-color: #ccc;
+    content: "";
+}
+.profile .left .photo{
+    width: 100%;
+    height: 306px;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+}
+.profile .left .photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.profile .left .name h2{
+    font-size: 40px;
+    font-weight: var(--bold-weight);
+    line-height: var(--tit-line-height);
+    padding: 40px 0 0 0;
+}
+.profile .left .name p{
+    padding: 10px 0 30px 0;
+}
+.profile .left .about{
+    font-size: 25px;
+    font-weight: var(--bold-weight);
+    line-height: var(--tit-line-height);
+}
+.profile .left .about .birth{
+    display: block;
+}
+.profile .left .about .number{
+    display: block;
+    padding: 10px 0;
+}
+.profile .left .about .mail{
+    display: block;
+    padding: 0 0 30px 0;
+}
+.profile .right{
+    margin: 0 0 0 127px;
+}
+.profile .right h3{
+    font-size: 35px;
+    font-weight: var(--bold-weight);
+    line-height: var(--tit-line-height);
+    color: var(--point-color);
+}
+.profile .right p{
+    line-height: 1.8;
+}
+.profile .right .edu h3{
+    padding: 0 0 30px 0;
+}
+.profile .right .lic h3,
+.profile .right .ski h3{
+    padding: 40px 0 30px 0;
+}
