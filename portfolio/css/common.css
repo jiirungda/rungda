@@ -12,6 +12,7 @@ html, body {
 }
 .wrapper {
     width: 1260px;
+    height: 1000px;
     margin: 0 auto; /* 가운데 */
 }
 #wrap {
